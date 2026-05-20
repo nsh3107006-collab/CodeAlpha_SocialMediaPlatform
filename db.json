@@ -1,0 +1,89 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "Ava Patel",
+      "username": "ava",
+      "email": "ava@example.com",
+      "bio": "Frontend student building tiny useful things.",
+      "avatar": "AP",
+      "passwordHash": "d3ad9315b7be5dd53b31a273b3b3aba5defe700808305aa16a3062b76658a791"
+    },
+    {
+      "id": "u2",
+      "name": "Noah Kim",
+      "username": "noah",
+      "email": "noah@example.com",
+      "bio": "Backend learner, coffee-fueled bug hunter.",
+      "avatar": "NK",
+      "passwordHash": "d3ad9315b7be5dd53b31a273b3b3aba5defe700808305aa16a3062b76658a791"
+    },
+    {
+      "id": "u3",
+      "name": "Mia Santos",
+      "username": "mia",
+      "email": "mia@example.com",
+      "bio": "Design notes, project demos, and class updates.",
+      "avatar": "MS",
+      "passwordHash": "d3ad9315b7be5dd53b31a273b3b3aba5defe700808305aa16a3062b76658a791"
+    }
+  ],
+  "posts": [
+    {
+      "id": "p1",
+      "userId": "u1",
+      "body": "Finished the profile card layout today. Tiny progress still counts.",
+      "createdAt": "2026-05-20T09:10:00.000Z",
+      "likes": [
+        "u2",
+        "u3"
+      ]
+    },
+    {
+      "id": "p2",
+      "userId": "u2",
+      "body": "Added database persistence for posts and comments. The app survives refreshes now.",
+      "createdAt": "2026-05-20T10:05:00.000Z",
+      "likes": [
+        "u1"
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "id": "c1",
+      "postId": "p1",
+      "userId": "u3",
+      "body": "Looks clean. The spacing feels much better.",
+      "createdAt": "2026-05-20T09:30:00.000Z"
+    },
+    {
+      "id": "c2",
+      "postId": "p2",
+      "userId": "u1",
+      "body": "Nice, that makes testing way easier.",
+      "createdAt": "2026-05-20T10:20:00.000Z"
+    }
+  ],
+  "followers": [
+    {
+      "followerId": "u1",
+      "followingId": "u2"
+    },
+    {
+      "followerId": "u2",
+      "followingId": "u1"
+    },
+    {
+      "followerId": "u3",
+      "followingId": "u1"
+    }
+  ],
+  "sessions": [
+    {
+      "token": "eaea6ab357e8531237c073ce789e8eb53f79ff5689c27f75",
+      "userId": "u1",
+      "createdAt": "2026-05-20T06:30:20.163Z"
+    }
+  ]
+}

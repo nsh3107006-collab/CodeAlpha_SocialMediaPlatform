@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulseboard Social</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="User profiles">
+        <div class="brand">
+          <div class="brand-mark">P</div>
+          <div>
+            <h1>Pulseboard</h1>
+            <p>Mini social app</p>
+          </div>
+        </div>
+
+        <section class="panel current-profile" aria-live="polite">
+          <span class="eyebrow">Account</span>
+          <div id="currentProfile"></div>
+        </section>
+
+        <section class="panel auth-panel">
+          <div class="section-head">
+            <h2 id="authTitle">Log in</h2>
+            <button class="text-button" id="authModeButton" type="button">Create account</button>
+          </div>
+          <form id="authForm" class="auth-form">
+            <input id="authName" name="name" type="text" placeholder="Full name" hidden />
+            <input id="authUsername" name="username" type="text" placeholder="Username" hidden />
+            <input name="email" type="email" placeholder="Email" autocomplete="email" required />
+            <input name="password" type="password" placeholder="Password" autocomplete="current-password" minlength="6" required />
+            <button type="submit" id="authSubmit">Log in</button>
+          </form>
+          <p class="auth-hint">Try ava@example.com with password demo123.</p>
+          <p class="auth-message" id="authMessage" role="status"></p>
+        </section>
+
+        <section class="panel">
+          <div class="section-head">
+            <h2>Profiles</h2>
+          </div>
+          <div class="profile-list" id="profileList"></div>
+        </section>
+      </aside>
+
+      <main class="feed" aria-label="Social feed">
+        <header class="feed-header">
+          <div>
+            <span class="eyebrow">Class network</span>
+            <h2>Home Feed</h2>
+          </div>
+          <button class="ghost-button" id="refreshButton" type="button">Refresh</button>
+        </header>
+
+        <form class="composer" id="postForm">
+          <label for="postInput">Create post</label>
+          <textarea id="postInput" name="body" maxlength="280" placeholder="Share a project update..." required></textarea>
+          <div class="composer-actions">
+            <span id="postCount">0/280</span>
+            <button type="submit">Post</button>
+          </div>
+        </form>
+
+        <section class="posts" id="posts" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <template id="profileTemplate">
+      <article class="profile-card">
+        <div class="profile-switch"></div>
+        <button class="follow-button" type="button"></button>
+      </article>
+    </template>
+
+    <template id="postTemplate">
+      <article class="post-card">
+        <header class="post-author"></header>
+        <p class="post-body"></p>
+        <div class="post-actions">
+          <button class="like-button" type="button"></button>
+          <span class="comment-total"></span>
+        </div>
+        <div class="comments"></div>
+        <form class="comment-form">
+          <input type="text" name="body" maxlength="180" placeholder="Write a comment..." required />
+          <button type="submit">Comment</button>
+        </form>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

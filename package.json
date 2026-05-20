@@ -1,0 +1,16 @@
+{
+  "name": "mini-social-media-app",
+  "version": "1.0.0",
+  "description": "A dependency-free mini social media platform with profiles, posts, comments, likes, and follows.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "social-media",
+    "node",
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT"
+}
