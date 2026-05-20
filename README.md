@@ -1,1 +1,1 @@
-# CodeAlpha_SocialMediaPlatform
+# SocialMediaPlatform
